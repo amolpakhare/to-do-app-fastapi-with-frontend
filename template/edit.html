@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Task{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Edit Task</h2>
+    <form action="/edit/{{ todo.id }}" method="post" class="todo-form">
+        <label for="title">Task Title:</label>
+        <input type="text" id="title" name="title" value="{{ todo.title }}" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description">{{ todo.description }}</textarea>
+
+        <label for="completed">Completed:</label>
+        <input type="checkbox" id="completed" name="completed" {% if todo.completed %}checked{% endif %}>
+
+        <button type="submit" class="btn btn-primary">Update Task</button>
+    </form>
+</div>
+{% endblock %}

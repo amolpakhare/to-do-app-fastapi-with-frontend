@@ -1,0 +1,13 @@
+from PIL import Image, ImageDraw, ImageFont
+
+# Create a blank image
+img = Image.new("RGB", (300, 100), color=(51, 51, 51))
+
+# Draw text
+draw = ImageDraw.Draw(img)
+font = ImageFont.load_default()  # You can replace with a TTF font if available
+draw.text((80, 40), "TODO App", fill=(255, 255, 255), font=font)
+
+# Save as logo.png
+img.save("logo.png")
+print("✅ Logo generated as logo.png")

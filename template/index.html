@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Todo List{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>My Todo List</h2>
+
+    <ul class="todo-list">
+        {% for todo in todos %}
+        <li>
+            <span class="{% if todo.completed %}completed{% endif %}">
+                {{ todo.title }}
+            </span>
+            <div class="actions">
+                <a href="/edit/{{ todo.id }}" class="btn btn-edit">Edit</a>
+                <form action="/delete/{{ todo.id }}" method="post" style="display:inline;">
+                    <button type="submit" class="btn btn-delete">Delete</button>
+                </form>
+            </div>
+        </li>
+        {% else %}
+        <li class="empty">No tasks yet. <a href="/create">Add one!</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
