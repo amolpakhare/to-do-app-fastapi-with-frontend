@@ -11,7 +11,7 @@ This TODO app allows users to:
 - Register and login securely
 - Create, read, update, and delete TODO tasks
 - Authenticate with JWT tokens
-- Interact with the backend via **RESTful API endpoints**
+- Interact with the backend via **FAST API endpoints**
 - Explore the API with Swagger UI
 
 The frontend is minimal (HTML, CSS, JavaScript) and primarily serves to test API interactions.
