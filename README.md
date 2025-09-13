@@ -1,6 +1,7 @@
 # FastAPI TODO App
 
 A **backend-focused TODO application** built using **FastAPI** and **SQLAlchemy**. This project demonstrates robust API development, secure user authentication, and database management with Python.
+ Built during my Python training at EPPS Infotech pvt ltd pune as part of learning practical backend development.
 
 
 ## **Project Overview**
@@ -32,5 +33,29 @@ The frontend is minimal (HTML, CSS, JavaScript) and primarily serves to test API
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/fastapi-todo-app.git
+git clone https://github.com/amolpakhare/fastapi-todo-app.git
 cd fastapi-todo-app
+
+## **Endpoits**
+
+| Endpoint     | Method | Description             |
+| ------------ | ------ | ----------------------- |
+| `/register`  | POST   | Register a new user     |
+| `/login`     | POST   | Login and get JWT token |
+| `/todo/`     | POST   | Create a new TODO task  |
+| `/todo/`     | GET    | Get all TODO tasks      |
+| `/todo/{id}` | PUT    | Update a TODO task      |
+| `/todo/{id}` | DELETE | Delete a TODO task      |
+
+
+## **fastapi-todo-app/**
+│
+├── main.py           # Entry point / FastAPI app
+├── database.py       # Database setup with SQLAlchemy
+├── requirements.txt
+├── todo.db           # SQLite database
+├── templates/        # Optional minimal HTML templates
+├── static/           # Optional CSS/JS files
+└── todo/             # Backend modules for routes and services
+
+Note: 
